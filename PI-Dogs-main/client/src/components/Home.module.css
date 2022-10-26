@@ -1,0 +1,25 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,350px);
+    justify-content: space-between;
+    margin: 70px;
+    padding-bottom: 20px;
+    font-size: 15px;  
+}
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    border-color: #0fcaae;
+
+}
+
+.button:hover {
+    background-color: #0a7969; 
+    color: white;
+}
+.paginado{
+    background-color:  #58c1b29e;
+   
+}

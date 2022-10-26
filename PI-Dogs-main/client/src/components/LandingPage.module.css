@@ -1,0 +1,17 @@
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    border-color: #0fcaae;
+
+}
+
+.button:hover {
+    background-color: #0a7969; 
+    color: white;
+}
+
+.title{
+    color:#0a7969;
+
+}
