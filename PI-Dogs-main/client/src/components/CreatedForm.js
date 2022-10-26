@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react' ;
 import {Link} from 'react-router-dom';
 import {getTemperaments, postDogs} from '../accions';
 import {useDispatch, useSelector} from 'react-redux';
-
+import style from './CreatedForm.module.css'
 
 export default function CreatedForm() {
 	const dispatch = useDispatch();
@@ -57,10 +57,11 @@ export default function CreatedForm() {
 		<div>
             <Link to='/home'> <button>Volver a home</button></Link>
 		<h1>Crea tus personajes</h1>
-		<form onSubmit={(e)=>handleSubmit(e)}>
+		<form className={style.form}
+		onSubmit={(e)=>handleSubmit(e)}>
 			<div>
-				<label>Nombre:</label>
-				<input
+				<label className={style.letras}>Nombre:</label>
+				<input className={style.input}
 				type="text"
 				value={input.name}
 				name="name"
@@ -68,8 +69,8 @@ export default function CreatedForm() {
 				/>
 			</div>
 			<div>
-				<label>height:</label>
-				<input 
+				<label className={style.letras}>Altura: </label>
+				<input className={style.input}
 				type="text"
 				value={input.height}
 				name="height"
@@ -78,8 +79,8 @@ export default function CreatedForm() {
 			</div>
 			
 			 <div>
-			 <label>weight:</label>
-			 <input
+			 <label className={style.letras}>Peso: </label>
+			 <input className={style.input}
 			 type="text"
 			 value={input.weight}
 			 name="weight"
@@ -87,8 +88,8 @@ export default function CreatedForm() {
 			 />
 			 </div>
 			  <div>
-			 <label>life_span:</label>
-			 <input
+			 <label className={style.letras}>Esperanza de vida: </label>
+			 <input className={style.input}
 			 type="text" 
 			 value={input.life_span}
 			 name="life_span"
@@ -96,9 +97,9 @@ export default function CreatedForm() {
 			 />
 			 </div>
              <div>
-			 <label>Imagen:</label>
-			 <input
-			 type="text" 
+			 <label className={style.letras}>Imagen:</label>
+			 <input className={style.input}
+			 type="file" 
 			 value={input.imagen}
 			 name="imagen"
 			 onChange={(e)=>handleChange(e)}
@@ -111,7 +112,7 @@ export default function CreatedForm() {
                 ))}
              </select>
              <ul><li>{input.temperament.map(el => el + ", ")}</li></ul>
-			  <button type='submit'>Crear personaje</button>
+			  <button className={style.button} type='submit'>Crear personaje</button>
 			 
 		</form>
         </div>
