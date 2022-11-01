@@ -11,10 +11,7 @@ export default function Card({image, name, temperament, life_span, height, weigh
             </div>
             <div >
             <h4>Temperamentos: {temperament}</h4> 
-            <p> Esperanza de vida: {life_span} <br/>
-            Altura cm: {height} <br/>
-            Peso kg: {weight} <br/>
-            </p>
+            
             </div>
 
         </div>

@@ -15,7 +15,7 @@ function App() {
     
       <Route exact path = '/' component={LandingPage}/>
       <Route path= '/home' component={Home}/>
-      <Route path= '/dogs' component={CreatedForm}/>
+      <Route exact path= '/dogs' component={CreatedForm}/>
       <Route exact path= '/dogs/:id' component={DetailCard}/>
       </Switch>
     </div>

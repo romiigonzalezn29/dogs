@@ -82,10 +82,10 @@ export function orderByTemperament(payload){
 }
 
 export function getDetails(id){
-    console.log('entro detail')
+    console.log('entro detail accion')
         return async function (dispatch){
             try {
-                var json = await axios.get(`http://localhost:3001/characters/${id}`)
+                var json = await axios.get(`http://localhost:3001/dogs/${id}`)
                 
                 return dispatch({
                 type: 'GET_DETAILS' ,

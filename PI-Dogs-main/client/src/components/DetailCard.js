@@ -3,6 +3,8 @@ import {Link, useParams} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { getDetails } from "../accions";
 import { useEffect } from "react";
+import style from './DetailCard.module.css'
+
 
 export default function DetailCard(props){
     console.log(props, 'detail.props')
@@ -18,26 +20,31 @@ export default function DetailCard(props){
       
     },[dispatch,id])
 
-    console.log(myCharacter)
+    console.log('myCharacter',myCharacter)
     
 
     return(
-        <div>
-            {
-            myCharacter.length>0 ?
-            <div>
+        <div className={style.card}>
+            
+            <div className={style.primer}>
+            <div className={style.circulo}></div>
                 <h1> {myCharacter.name}</h1>
-                <img src = {myCharacter.image}/>
-                <h2> Status: {myCharacter.height}</h2>
-                <p>Nacimiento: {myCharacter.weight} </p>
+                <img className={style.image} src = {myCharacter.image}/>
+                <h3>Temperamentos: {myCharacter.temperament}</h3>
+                <h3> Altura: {myCharacter.height}</h3>
+                <h3>Esperanza de vida: {myCharacter.life_span} </h3>
                
+            <h3> 
+            Peso kg: {myCharacter.weight} 
+            </h3>
                 
-             </div> : <p> CARGANDO... </p>
+             
         
-            } 
+            
             <Link to='/home'>
                 <button> Volver </button>
             </Link>
+            </div> 
         </div>
     )
 }

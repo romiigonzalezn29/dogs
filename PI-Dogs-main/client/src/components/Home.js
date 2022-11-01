@@ -61,7 +61,7 @@ const paginado=(pageN)=>{
                     currentDog?.map((c)=> {
                         return (
                             <div  key={c.id}>
-                                
+                                <Link to = {"/dogs/" + c.id} >
                                 <div>
                                     <Card name={c.name} 
                                     image={c.image} 
@@ -70,6 +70,7 @@ const paginado=(pageN)=>{
                                     height={c.height} 
                                     weight={c.weight} />
                                 </div>
+                                </Link>
                             </div>
                         )
                     })

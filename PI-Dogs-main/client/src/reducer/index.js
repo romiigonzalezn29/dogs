@@ -49,7 +49,7 @@ switch (type) {
 				dogs: payload === 'all'? state.allDogs : createdFilter
 			}
 			case 'GET_DETAILS' :
-				console.log(payload)
+				console.log('payload en reducer',payload)
 				return {
 					...state,
 					detail: payload
