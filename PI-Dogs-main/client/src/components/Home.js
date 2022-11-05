@@ -65,7 +65,7 @@ const paginado=(pageN)=>{
                                 <div>
                                     <Card name={c.name} 
                                     image={c.image} 
-                                    temperament={c.temperament}
+                                    temperament={c.temperaments? c.temperaments.map(el => el.name + ", "):c.temperament}
                                     life_span={c.life_span} 
                                     height={c.height} 
                                     weight={c.weight} />

@@ -6,14 +6,14 @@ import style from './CreatedForm.module.css'
 
 export default function CreatedForm() {
 	const dispatch = useDispatch();
-	const temperaments = useSelector((state) => state.temperaments)
+	const temperamentos = useSelector((state) => state.temperaments)
 
 	const [input,setInput] = useState({
 		name:"",
 		height:"",
 		weight:"",
 		life_span:"",
-        imagen:"",
+        image:"",
 		temperament:[]
 	})
 
@@ -26,10 +26,12 @@ export default function CreatedForm() {
 	}
     
 	function handleSelect(e){
-        console.log(e.target.value)
+        
 		setInput({
+			
 			...input,
 			temperament: [...input.temperament ,e.target.value]
+			
 		})
 	}
 
@@ -43,7 +45,7 @@ export default function CreatedForm() {
 		height:"",
 		weight:"",
 		life_span:"",
-        imagen:"",
+        image:"",
 		temperament:[]
 		 }) 
 	}
@@ -99,19 +101,19 @@ export default function CreatedForm() {
              <div>
 			 <label className={style.letras}>Imagen:</label>
 			 <input className={style.input}
-			 type="file" 
-			 value={input.imagen}
-			 name="imagen"
+			 type="text" 
+			 value={input.image}
+			 name="image"
 			 onChange={(e)=>handleChange(e)}
 			 />
              
 			 </div>
 			 <select onChange={(e)=>handleSelect(e)}>
-                {temperaments.map((occ) => (
-                    <option key={occ.id} value={occ.name} >{occ.name}</option>
+                {temperamentos.map((t) => (
+                    <option key={t.id} value={t.name} >{t.name}</option>
                 ))}
              </select>
-             <ul><li>{input.temperament.map(el => el + ", ")}</li></ul>
+             <ul><li>{input.temperament.map(el => el   + ", ")}</li></ul>
 			  <button className={style.button} type='submit'>Crear personaje</button>
 			 
 		</form>

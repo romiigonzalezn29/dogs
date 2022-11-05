@@ -30,7 +30,7 @@ export default function DetailCard(props){
             <div className={style.circulo}></div>
                 <h1> {myCharacter.name}</h1>
                 <img className={style.image} src = {myCharacter.image}/>
-                <h3>Temperamentos: {myCharacter.temperament}</h3>
+                <h3>Temperamentos: {myCharacter.temperaments? myCharacter.temperaments.map(el => el.name + ", ") : myCharacter.temperament}</h3>
                 <h3> Altura: {myCharacter.height}</h3>
                 <h3>Esperanza de vida: {myCharacter.life_span} </h3>
                

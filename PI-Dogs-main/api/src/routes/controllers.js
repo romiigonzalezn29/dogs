@@ -63,9 +63,10 @@ const allDoggi = async (req,res) => {
 
 const searchById = async(req,res) => {
     const { id } = req.params;
-    console.log(id, 'id')
+    
     if(Number(id) === NaN) {
-        const dbId = await Dog.findByPk(id);
+        const dbId = console.log(await Dog.findByPk(id));
+        console.log(dbId)
         res.status(200).send(dbId);
 
     } else {
@@ -124,7 +125,7 @@ const getAllTemperaments = async(req, res) => {
        
         image,
        })
-       console.log("name" ,dogCreated.name)
+       console.log("name" ,dogCreated)
     
        let findTemperaments = await Temperament.findAll ({
            where: {name : temperament}
