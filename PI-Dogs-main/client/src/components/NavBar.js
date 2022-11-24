@@ -51,33 +51,42 @@ const paginado=(pageN)=>{
     }
 
   return (
-    <div > 
+    <div className={style.bloques}> 
         
-            <div className={style.bloques}>
+            
             <div >
             <SearchBar/>
         </div>
+        <div>
         <Link to = '/dogs' >
                 <button className={style.button}>
                     Crear Perrito
                 </button>
             </Link>
-    <div className={style.segundo}>
-        <h4 className={style.letras}> filtros por temperamento:</h4>
+        </div>
+        
+    <div >
+       
+       </div>
+       <div>
         <select onChange={e=> handleTemperament(e)}>
             {temperaments?.map((temp)=> (
                 <option key={temp.id} value={temp.name}>{temp.name}</option>
             ))}
         </select>
+        </div>
+        <div>
         <button className={style.button} value='all' onClick={e=> handleTemperament(e)}>Quitar filtros</button>
-    </div>
-    <div className={style.tercero}> 
-        <h4 className={style.letras}>filtrar por existentes o creados:</h4>
+        </div>
+        
+    
+    <div > 
+       
         <button className={style.button} value='api' onClick={e=> handleCreated(e)}>Existentes</button>
         <button className={style.button} value='created' onClick={e=> handleCreated(e)}>Creados</button>
         <button className={style.button} value='all' onClick={e=> handleCreated(e)}>Todos</button>
     </div>
-</div>
+
 </div>
   )
 }

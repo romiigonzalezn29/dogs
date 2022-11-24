@@ -42,7 +42,7 @@ export default function DetailCard(props){
         
             
             <Link to='/home'>
-                <button> Volver </button>
+                <button className={style.button}> Volver </button>
             </Link>
             </div> 
         </div>

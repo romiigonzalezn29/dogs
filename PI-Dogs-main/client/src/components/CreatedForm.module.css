@@ -1,3 +1,9 @@
+.superior{
+    background-color:#0fcaae ;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 .input{
    /*  font-family:Verdana,Helvetica;
     font-size:10pt;
@@ -22,28 +28,53 @@
        
       
 }
+.li{
+    color: white;
+}
 .letras{
     font-size:large;
     font-weight:600;
-    font-family: "Roboto", sans-serif;
-    color: #000000;
+    
+    color: white;
+}
+.h1{
+    color: white;
 }
 .form{
     padding: 60px;
     max-width: 400px;
-    background-color: #2abe99e2;
+    background-color: #0fcaae;
     margin: 0 auto;
     border-radius: 5%;
   }
   .button {
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    border-radius: 10px;
-    border-color: #0fcaae;
-
+    padding: 10px;
+    border: 10px #aaa;
+    background-color: #0fcaae;
+    color: #ffffff;
 }
 
 .button:hover {
     background-color: #0a7969; 
-    color: white;
+    color: rgb(183, 178, 178);
+    border: 10px #aaa;
+    padding: 10px;
+}
+.buttonCrear {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    padding: 10px;
+    border: 10px #aaa;
+    background-color: #0fcaae;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.buttonCrear:hover {
+    background-color: #0a7969; 
+    color: rgb(183, 178, 178);
+    border: 10px #aaa;
+    padding: 10px;
 }

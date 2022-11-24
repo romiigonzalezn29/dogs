@@ -35,7 +35,20 @@
     border-radius:3% 3% 5% 5%;
 }
 
-.button{
-    display: flex;
-    justify-content: flex-end;
+
+.button {
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    padding: 10px;
+    border: 10px #aaa;
+    background-color: #0fcaae;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: #0a7969; 
+    color: rgb(183, 178, 178);
+    border: 10px #aaa;
+    padding: 10px;
 }

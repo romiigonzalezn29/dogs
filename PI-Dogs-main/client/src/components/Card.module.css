@@ -5,7 +5,8 @@
     height: 450px;
     position: relative;
     border-radius:0 0 5% 5%;
-    background-color: rgba(248, 244, 242, 0.858)
+    background-color: rgba(248, 244, 242, 0.858);
+    
 }
 
 
@@ -16,6 +17,7 @@
     height: 50%;
     border-radius: 0 0 100% 100%;
     background-color: rgba(24, 138, 134, 0.578) ;
+   
     
 }
 .nombre{
@@ -27,4 +29,5 @@
     height: 200px;
     position:relative;
     border-radius: 5%;
+    
 }

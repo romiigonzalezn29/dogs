@@ -18,6 +18,7 @@ const dogsInApi = async() => {
 
         }
     })
+    
 return info
 
 }

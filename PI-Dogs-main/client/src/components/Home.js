@@ -40,21 +40,24 @@ const paginado=(pageN)=>{
   
 
     return (
-        <div>
-            <div className={style.paginado}>
-            <h1>Buscador de razas</h1>
+        <div className={style.todo}>
+            <div className={style.navBar}>
+            <div>
+                
+            
 
             <NavBar/>
-            
-           
-           
-         
-         
-        </div>
-        <button  value='asc' onClick={e=> handleName(e)}>A - Z</button>
-            <button value='des' onClick={e=> handleName(e)}>Z - A</button>
-            <button  value='all' onClick={e=> handleName(e)}>All</button>
+            </div>
+            <div className={style.ordenado}>
+            <button className={style.button} value='asc' onClick={e=> handleName(e)}>A - Z</button>
+            <button className={style.button} value='des' onClick={e=> handleName(e)}>Z - A</button>
+            <button className={style.button} value='all' onClick={e=> handleName(e)}>Todos</button>
+            </div>
+            </div>
+        
             <Paginado dogPerPg={dogPerPg} dogs={dogs.length} paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+        
+         
             <div className={style.card} >
             
             {

@@ -57,8 +57,14 @@ export default function CreatedForm() {
 
 	return(
 		<div>
-            <Link to='/home'> <button>Volver a home</button></Link>
-		<h1>Crea tus personajes</h1>
+			<div className={style.superior}>
+
+			
+			<div >
+			<h1 className={style.h1} >Crea tu raza</h1>
+            <Link to='/home'> <button className={style.button}>Volver a home</button></Link>
+		
+		</div>
 		<form className={style.form}
 		onSubmit={(e)=>handleSubmit(e)}>
 			<div>
@@ -113,10 +119,11 @@ export default function CreatedForm() {
                     <option key={t.id} value={t.name} >{t.name}</option>
                 ))}
              </select>
-             <ul><li>{input.temperament.map(el => el   + ", ")}</li></ul>
-			  <button className={style.button} type='submit'>Crear personaje</button>
+             <ul><li className={style.li}>{input.temperament.map(el => el   + ", ")}</li></ul>
+			  <button className={style.buttonCrear} type='submit'>Crear</button>
 			 
 		</form>
+		</div>
         </div>
     )
     }
