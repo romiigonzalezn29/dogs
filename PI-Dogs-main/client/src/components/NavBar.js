@@ -65,7 +65,7 @@ const paginado=(pageN)=>{
                 </button>
             </Link>
         </div>
-        
+         
     <div >
        
        </div>

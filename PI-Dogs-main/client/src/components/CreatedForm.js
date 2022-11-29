@@ -118,7 +118,7 @@ export default function CreatedForm() {
 			 name="image"
 			 onChange={(e)=>handleChange(e)}
 			 />
-             
+              
 			 </div>
 			 <select onChange={(e)=>handleSelect(e)}>
                 {temperamentos.map((t) => (

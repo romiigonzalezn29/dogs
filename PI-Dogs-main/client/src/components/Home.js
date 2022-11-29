@@ -59,7 +59,7 @@ const paginado=(pageN)=>{
             </div>
          
             <div className={style.card} >
-            
+             
             {
                     currentDog?.map((c)=> {
                         return (

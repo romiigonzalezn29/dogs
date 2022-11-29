@@ -39,7 +39,7 @@ export default function DetailCard(props){
             </h3>
                 
              
-        
+          
             
             <Link to='/home'>
                 <button className={style.button}> Volver </button>

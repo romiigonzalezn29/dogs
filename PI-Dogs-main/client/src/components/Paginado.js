@@ -34,7 +34,7 @@ export default function Paginado({dogPerPg,dogs,paginado,setCurrentPage,currentP
           <button className={style.button} onClick={e=>nextPg(e)}>Siguiente</button>
         </ul>
         </nav> 
-        
+         
         </>
       )
     }
