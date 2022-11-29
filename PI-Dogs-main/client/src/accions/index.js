@@ -85,7 +85,11 @@ export function getDetails(id){
     console.log('entro detail accion')
         return async function (dispatch){
             try {
+<<<<<<< HEAD
                 var json = await axios.get(`https://api-dog-prueba-production.up.railway.app${id}`)
+=======
+                var json = await axios.get(`https://api-dog-prueba-production.up.railway.app/dogs/${id}`)
+>>>>>>> ebc420dfd7416a1f56be4770f4f5b63c40e58153
                 
                 return dispatch({
                 type: 'GET_DETAILS' ,
