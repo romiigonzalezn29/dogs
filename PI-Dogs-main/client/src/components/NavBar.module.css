@@ -1,3 +1,21 @@
+@media screen and (max-width: 840px){
+    .ordenamientos{
+        flex-direction: column;
+        display: flex;
+     
+       
+    }
+    .input{
+        height: 30px;
+    
+    }
+    .botones{
+        flex-direction: column;
+        display: flex;
+    }
+
+}
+
 .bloques{
    
     width: 100%;

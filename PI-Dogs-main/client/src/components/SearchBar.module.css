@@ -1,3 +1,11 @@
+
+@media screen and (max-width: 840px){
+    .search{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 .button {
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;

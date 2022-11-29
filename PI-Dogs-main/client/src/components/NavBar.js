@@ -57,6 +57,7 @@ const paginado=(pageN)=>{
             <div >
             <SearchBar/>
         </div>
+         <div className={style.botones}>
         <div>
         <Link to = '/dogs' >
                 <button className={style.button}>
@@ -78,9 +79,9 @@ const paginado=(pageN)=>{
         <div>
         <button className={style.button} value='all' onClick={e=> handleTemperament(e)}>Quitar filtros</button>
         </div>
-        
+        </div>
     
-    <div > 
+    <div className={style.ordenamientos}> 
        
         <button className={style.button} value='api' onClick={e=> handleCreated(e)}>Existentes</button>
         <button className={style.button} value='created' onClick={e=> handleCreated(e)}>Creados</button>

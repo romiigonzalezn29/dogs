@@ -2,6 +2,7 @@
     background-color:#0fcaae ;
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom: 40px;
 }
 
 .input{
@@ -47,21 +48,7 @@
     margin: 0 auto;
     border-radius: 5%;
   }
-  .button {
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-    padding: 10px;
-    border: 10px #aaa;
-    background-color: #0fcaae;
-    color: #ffffff;
-}
-
-.button:hover {
-    background-color: #0a7969; 
-    color: rgb(183, 178, 178);
-    border: 10px #aaa;
-    padding: 10px;
-}
+  
 .buttonCrear {
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
@@ -70,9 +57,40 @@
     background-color: #0fcaae;
     color: #ffffff;
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .buttonCrear:hover {
+    background-color: #0a7969; 
+    color: rgb(183, 178, 178);
+    border: 10px #aaa;
+    padding: 10px;
+}
+.temperamentos{
+    display: flex;
+    color: #ffffff;
+justify-content: space-evenly;
+border: 1px #d2f1ed solid ;
+padding-left: 10px;
+padding-right: 5px;
+}
+.divTemperamentos{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.button {
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    padding: 10px;
+    border: 10px #aaa;
+    background-color: #0fcaae;
+    color: #ffffff;
+    
+}
+
+.button:hover {
     background-color: #0a7969; 
     color: rgb(183, 178, 178);
     border: 10px #aaa;

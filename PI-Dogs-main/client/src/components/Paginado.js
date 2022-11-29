@@ -22,7 +22,7 @@ export default function Paginado({dogPerPg,dogs,paginado,setCurrentPage,currentP
       return (
         <>    
         <nav>
-        <ul>
+        <ul className={style.paginado}>
           <button className={style.button} onClick={e=>prevPg(e)}>Anterior</button> 
             {pageN.length>1 &&
               pageN.map(n=>(

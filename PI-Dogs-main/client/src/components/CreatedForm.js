@@ -50,6 +50,12 @@ export default function CreatedForm() {
 		 }) 
 	}
 
+	function handleDelete(el){
+		setInput({
+			...input,
+			temperament: input.temperament.filter( occ => occ !== el)
+		})
+	}
 
 	useEffect(()=> {
 		dispatch(getTemperaments());
@@ -105,7 +111,7 @@ export default function CreatedForm() {
 			 />
 			 </div>
              <div>
-			 <label className={style.letras}>Imagen:</label>
+			 <label className={style.letras}>Imagen (url):</label>
 			 <input className={style.input}
 			 type="text" 
 			 value={input.image}
@@ -119,11 +125,20 @@ export default function CreatedForm() {
                     <option key={t.id} value={t.name} >{t.name}</option>
                 ))}
              </select>
-             <ul><li className={style.li}>{input.temperament.map(el => el   + ", ")}</li></ul>
-			  <button className={style.buttonCrear} type='submit'>Crear</button>
-			 
+             
 		</form>
+		<div className={style.divTemperamentos}>
+		{input.temperament?.map(el=> 
+				<div className={style.temperamentos} key={el.id}>
+					<p>{el}</p>
+					<button  className={style.button} onClick={()=> handleDelete(el)}>x</button>
+				</div>)}
+				</div>
+				<div>
+			  <button className={style.buttonCrear} type='submit'>Crear</button>
+			  </div>
 		</div>
+
         </div>
     )
     }

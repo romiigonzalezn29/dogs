@@ -54,9 +54,9 @@ const paginado=(pageN)=>{
             <button className={style.button} value='all' onClick={e=> handleName(e)}>Todos</button>
             </div>
             </div>
-        
+        <div className={style.paginado} >
             <Paginado dogPerPg={dogPerPg} dogs={dogs.length} paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
-        
+            </div>
          
             <div className={style.card} >
             
@@ -78,6 +78,7 @@ const paginado=(pageN)=>{
                         )
                     })
                 }
+                
             </div>
             
         </div>
