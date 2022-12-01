@@ -67,8 +67,10 @@ padding-left: 10px;
 padding-right: 5px;
 }
 .divTemperamentos{
+
     display: flex;
     justify-content: space-around;
+    margin-top: 10px;
     
 }
 .button {

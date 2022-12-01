@@ -4,41 +4,20 @@ import {useDispatch, useSelector} from 'react-redux';
 import { Link } from 'react-router-dom'
 import SearchBar from "./SearchBar";
 import style from './NavBar.module.css'
-import Paginado from "./Paginado";
+
 
 
 export default function NavBar(){
     const dispatch = useDispatch();
 	const temperaments = useSelector((state) => state.temperaments);
    
-    const dogs = useSelector((state)=> state.dogs)
-    const [orden, setOrden] = useState('')
-
-
-const[currentPage, setCurrentPage]=useState(1);
-
-const[dogPerPg]=useState(8);
-const inLastDog= currentPage*dogPerPg;
-const inFirstDog= inLastDog-dogPerPg;
-const currentDog=dogs.slice(inFirstDog,inLastDog);
- 
-
-const paginado=(pageN)=>{
-  setCurrentPage(pageN)
-}
-
   
 
     useEffect(()=> {
 		dispatch(getTemperaments());
 	}, [dispatch]);
 
-    function handleAtoZ(e){
-        e.preventDefault();
-        dispatch(orderByName(e.target.value));
-        setCurrentPage(1);
-        setOrden(`ordenado ${e.target.value}`)
-    }
+  
     
     function handleTemperament(e){
         console.log(e.target.value)

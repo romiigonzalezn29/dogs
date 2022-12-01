@@ -64,8 +64,8 @@ const paginado=(pageN)=>{
                     currentDog?.map((c)=> {
                         return (
                             <div className={style.mapCard} key={c.id}>
-                                <Link to = {"/dogs/" + c.id} >
-                                <div>
+                                <Link to = {"/dogs/" + c.id} className={style.link}>
+                                <div className={style.textCard}>
                                     <Card name={c.name} 
                                     image={c.image} 
                                     temperament={c.temperaments? c.temperaments.map(el => el.name + ", "):c.temperament}

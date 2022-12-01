@@ -23,6 +23,7 @@ export default function CreatedForm() {
 			[e.target.name] : e.target.value
 		})
 		console.log("input",input)
+		
 	}
     
 	function handleSelect(e){
@@ -49,7 +50,7 @@ export default function CreatedForm() {
 		temperament:[]
 		 }) 
 	}
-
+	
 	function handleDelete(el){
 		setInput({
 			...input,
@@ -77,6 +78,7 @@ export default function CreatedForm() {
 				<label className={style.letras}>Nombre:</label>
 				<input className={style.input}
 				type="text"
+				required = 'required'
 				value={input.name}
 				name="name"
 				onChange={(e)=>handleChange(e)} 
@@ -86,6 +88,7 @@ export default function CreatedForm() {
 				<label className={style.letras}>Altura: </label>
 				<input className={style.input}
 				type="text"
+				required = 'required'
 				value={input.height}
 				name="height"
 				onChange={(e)=>handleChange(e)}
@@ -96,6 +99,7 @@ export default function CreatedForm() {
 			 <label className={style.letras}>Peso: </label>
 			 <input className={style.input}
 			 type="text"
+			 required = 'required'
 			 value={input.weight}
 			 name="weight"
 			 onChange={(e)=>handleChange(e)}
@@ -105,6 +109,7 @@ export default function CreatedForm() {
 			 <label className={style.letras}>Esperanza de vida: </label>
 			 <input className={style.input}
 			 type="text" 
+			 required = 'required'
 			 value={input.life_span}
 			 name="life_span"
 			 onChange={(e)=>handleChange(e)}
@@ -114,31 +119,37 @@ export default function CreatedForm() {
 			 <label className={style.letras}>Imagen (url):</label>
 			 <input className={style.input}
 			 type="text" 
+			 required = 'required'
 			 value={input.image}
 			 name="image"
 			 onChange={(e)=>handleChange(e)}
 			 />
               
 			 </div>
+			 <div>
+			 <label  className={style.letras}> Temperamentos:</label>
+			 </div>
+			
 			 <select onChange={(e)=>handleSelect(e)}>
                 {temperamentos.map((t) => (
-                    <option key={t.id} value={t.name} >{t.name}</option>
+                    <option key={t.id+'opcion'} value={t.name} >{t.name}</option>
                 ))}
              </select>
              
-		</form>
+		
 		<div className={style.divTemperamentos}>
 		{input.temperament?.map(el=> 
 				<div className={style.temperamentos} key={el.id}>
-					<p>{el}</p>
-					<button  className={style.button} onClick={()=> handleDelete(el)}>x</button>
+					<p key={el}>{el}</p>
+					<button type='button' key={el.id+'delet'} className={style.button} onClick={()=> handleDelete(el)}>x</button>
 				</div>)}
 				</div>
 				<div>
-			  <button className={style.buttonCrear} type='submit'>Crear</button>
+			  <button className={style.buttonCrear} type='submit' >Crear</button>
 			  </div>
+			  </form>
 		</div>
-
+		
         </div>
     )
     }

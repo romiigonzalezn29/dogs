@@ -51,24 +51,44 @@
  
 }
 
-@media (min-width: 375px)
+@media (min-width: 374px)
 and (max-width: 800px) {
+   
     .card{
        
         display: flex;
         justify-content: flex-start;
-        margin-left: 0;
-       
+        align-items: flex-start;
+      
         
     }
     .todo {
-        float: inline-start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        
+       
+        
+    } 
+    .paginado{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 40px;
     }
     .mapCard{
-        height: 480px;
+        height: 400px;
         width: 300px;
        
+       margin-bottom: 100px;
     }
+   .textCard{
+margin-left:50px;
+
+height: 350px;
+width: 250px;
+}
     
     
 }
@@ -113,3 +133,21 @@ and (max-width: 800px) {
     margin-left: 30px;
 
 }
+/* .textCard{
+margin-left:0px;
+background-color: brown;
+}
+.mapCard{
+    background-color: coral;
+
+} */
+/* .card{
+    background-color: chartreuse;
+    margin-left: 20px;
+} */
+.link{
+    color: #000000;
+    outline: none;
+    text-decoration: none;
+}
+
