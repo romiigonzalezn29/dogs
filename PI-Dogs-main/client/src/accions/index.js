@@ -1,9 +1,11 @@
-import axios from 'axios';
 
+import axios from 'axios'; 
 
+import { hostBack } from '../assets/constants';
+ console.log(hostBack, 'host back')
 export function dogsFront(){
     return async function(dispatch){
-        let json = await axios.get('https://api-dog-prueba-production.up.railway.app/dogs',{
+        let json = await axios.get(`${hostBack}/dogs`,{
     
         })
         return dispatch({
@@ -16,7 +18,7 @@ export function dogsFront(){
 export function getTemperaments(){
     return async function(dispatch){
         try {
-        let json = await axios.get('https://api-dog-prueba-production.up.railway.app/temperaments',{
+        let json = await axios.get(`${hostBack}/temperaments`,{
         
         })
         
@@ -33,7 +35,7 @@ export function getTemperaments(){
 
 export function postDogs(payload){
     return async function(dispatch){
-        const response = await axios.post('https://api-dog-prueba-production.up.railway.app/dogs', payload)
+        const response = await axios.post(`${hostBack}/dogs`, payload)
     console.log(response)
     return response;
     }
@@ -41,7 +43,7 @@ export function postDogs(payload){
 export function namesOfDogs(name){
     return async function(dispatch){
         try {
-            let json = await axios ('https://api-dog-prueba-production.up.railway.app/dogs?name=' + name)
+            let json = await axios (`${hostBack}/dogs?name=` + name)
 return dispatch({
     type : 'NAME_OF_DOGS',
     payload: json.data
@@ -85,7 +87,7 @@ export function getDetails(id){
     console.log('entro detail accion')
         return async function (dispatch){
             try {
-                var json = await axios.get(`https://api-dog-prueba-production.up.railway.app/dogs/${id}`)
+                var json = await axios.get(`${hostBack}/dogs/${id}`)
                 
                 return dispatch({
                 type: 'GET_DETAILS' ,

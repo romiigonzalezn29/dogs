@@ -1,7 +1,7 @@
 @media (max-width: 829px){
   
     .paginado{
-       background-color: chartreuse;
+      
         position: flex;
         height: 30px;
         flex-direction: row;

@@ -63,7 +63,7 @@ const paginado=(pageN)=>{
             {
                     currentDog?.map((c)=> {
                         return (
-                            <div  key={c.id}>
+                            <div className={style.mapCard} key={c.id}>
                                 <Link to = {"/dogs/" + c.id} >
                                 <div>
                                     <Card name={c.name} 
