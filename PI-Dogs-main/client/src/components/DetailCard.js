@@ -3,11 +3,12 @@ import {Link, useParams} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { getDetails } from "../accions";
 import { useEffect } from "react";
+import logo2 from '../assets/images/dogRun.gif'
 import style from './DetailCard.module.css'
 
 
 export default function DetailCard(props){
-    console.log(props, 'detail.props')
+    
     const dispatch = useDispatch()
    
     const myCharacter = useSelector((state=> state.detail))
@@ -15,16 +16,17 @@ export default function DetailCard(props){
     const {id}=useParams()
 
     useEffect(()=>{
-        console.log('effect')
+        
       dispatch(getDetails(id))
       
     },[dispatch,id])
 
-    console.log('myCharacter',myCharacter)
+    
     
 
     return(
         <div className={style.card}>
+            {myCharacter.name?
             
             <div className={style.primer}>
             <div className={style.circulo}></div>
@@ -45,6 +47,12 @@ export default function DetailCard(props){
                 <button className={style.button}> Volver </button>
             </Link>
             </div> 
+                :
+                <div>
+                <h2 id={style.cargando} > Cargando... </h2>
+            <img id={style.img} src={logo2} alt='Cargando...'/>   
+            </div>
+                }
         </div>
     )
 }

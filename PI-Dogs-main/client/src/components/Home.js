@@ -7,6 +7,8 @@ import Card from "./Card";
 import style from './Home.module.css'
 import NavBar from "./NavBar";
 import Paginado from "./Paginado";
+
+import logo2 from '../assets/images/dogRun.gif'
 export default function Home(){
     const dispatch = useDispatch()
     const dogs = useSelector((state)=> state.dogs)
@@ -40,7 +42,10 @@ const paginado=(pageN)=>{
   
 
     return (
-        <div className={style.todo}>
+        
+        <div className={style.todo}> 
+
+           
             <div className={style.navBar}>
             <div>
                 
@@ -57,10 +62,12 @@ const paginado=(pageN)=>{
         <div className={style.paginado} >
             <Paginado dogPerPg={dogPerPg} dogs={dogs.length} paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
             </div>
-         
-            <div className={style.card} >
+            <div>
+     
+     {dogs.length? 
+                    <div className={style.card} >
              
-            {
+                    {    
                     currentDog?.map((c)=> {
                         return (
                             <div className={style.mapCard} key={c.id}>
@@ -78,10 +85,22 @@ const paginado=(pageN)=>{
                         )
                     })
                 }
+                </div>
                 
+                : 
+                <div>
+                <h2 id={style.cargando} > Cargando... </h2>
+            <img id={style.img} src={logo2} alt='Cargando...'/>   
             </div>
+                
             
-        </div>
+
+} 
+               
+       </div>
+        
+         </div>
+             
     )
 }
 
