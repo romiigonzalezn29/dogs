@@ -17,6 +17,7 @@
     border: 10px #aaa;
     background-color: #0fcaae;
     color: #ffffff;
+    font-family: Century Gothic, sans-serif;
 }
   
 .button:hover {
@@ -28,6 +29,6 @@
 
 .input{
     height: 100%;
-   
+    font-family: Century Gothic, sans-serif;
     
 }

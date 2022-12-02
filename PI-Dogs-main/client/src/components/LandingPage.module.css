@@ -5,7 +5,8 @@
     border: 10px #aaa;
     background-color: #0fcaae;
     color: #ffffff;
-    font-size: 30px
+    font-size: 30px;
+    font-family: Century Gothic, sans-serif;
 }
 
 .button:hover {
@@ -16,6 +17,13 @@
 }
  
 .title{
-    color:#0a7969;
+    color: #0fcaae;
+    
+    font-family: Century Gothic, sans-serif;
 
 }
+ .contenedor{
+    background-color: rgba(248, 242, 242, 0.858);
+    padding: 20px;
+} 
+

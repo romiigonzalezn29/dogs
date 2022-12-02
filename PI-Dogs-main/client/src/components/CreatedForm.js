@@ -63,13 +63,13 @@ export default function CreatedForm() {
 	}, [dispatch]);
 
 	return(
-		<div>
+		<div className={style.contenedor}>
 			<div className={style.superior}>
 
 			
 			<div >
 			<h1 className={style.h1} >Crea tu raza</h1>
-            <Link to='/home'> <button className={style.button}>Volver a home</button></Link>
+            <Link to='/home'> <button className={style.button} id={style.link}>Volver a home</button></Link>
 		
 		</div>
 		<form className={style.form}
@@ -130,7 +130,7 @@ export default function CreatedForm() {
 			 <label  className={style.letras}> Temperamentos:</label>
 			 </div>
 			
-			 <select onChange={(e)=>handleSelect(e)}>
+			 <select  onChange={(e)=>handleSelect(e)}>
                 {temperamentos.map((t) => (
                     <option key={t.id+'opcion'} value={t.name} >{t.name}</option>
                 ))}
@@ -139,13 +139,13 @@ export default function CreatedForm() {
 		
 		<div className={style.divTemperamentos}>
 		{input.temperament?.map(el=> 
-				<div className={style.temperamentos} key={el.id}>
-					<p key={el}>{el}</p>
-					<button type='button' key={el.id+'delet'} className={style.button} onClick={()=> handleDelete(el)}>x</button>
+				<div  key={el.id}>
+					
+					<button type='button' key={el.id+'delet'} className={style.button} id={style.temperamentos} onClick={()=> handleDelete(el)}>{el} x</button>
 				</div>)}
 				</div>
 				<div>
-			  <button className={style.buttonCrear} type='submit' >Crear</button>
+			  <button className={style.button} type='submit' >Crear</button>
 			  </div>
 			  </form>
 		</div>
